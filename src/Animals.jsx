@@ -21,11 +21,15 @@ export default function Animals({ type }) {
   const handleClick = function () {
     setWidth(width + 20);
   };
+  const styling = {
+    width: width + "px",
+  };
   return (
     <div className="relative border-2 border-gray-200 p-4 w-[13%] shadow-lg shadow-black/20 rounded-xl animate-pop">
       <img src={svgMap[type]} alt="animal" className="h-40" />
       <button
-        className={`w-[${width}px] max-w-[50px] absolute bottom-3 right-3`}
+        style={styling}
+        className={`max-w-[80px] absolute bottom-3 right-3`}
         onClick={handleClick}
       >
         <img src={like} alt="like" />
